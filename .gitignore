@@ -123,6 +123,7 @@ _deps
 *.out
 *.app
 
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
