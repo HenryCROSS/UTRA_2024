@@ -77,28 +77,3 @@ void RotateL(){
 void RotateR(){
   motor_run(speed,-speed);
 }
-void turn_Left_to_Line(){
-  Forward_By_Time(First_forward_time);
-  while (numMR < black_fence){
-    read_data();
-    TurnL();
-    delay(Micro_Delay_Time);
-  }
-}
-void turn_Right_to_Line(){
-  Forward_By_Time(First_forward_time);
-  while (numML < black_fence){
-    read_data();
-    TurnR();
-    delay(Micro_Delay_Time);
-  }
-}
-void turn_Back_to_Line(){
-  RotateL();
-  delay(First_turn_time);
-  while (numMR < black_fence){
-    read_data();
-    RotateL();
-    delay(Micro_Delay_Time);
-  }
-}
