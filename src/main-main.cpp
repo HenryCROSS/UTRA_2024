@@ -30,9 +30,6 @@ void setup() {
   pinMode(QTR_SENSOR_L, INPUT);
   pinMode(QTR_SENSOR_R, INPUT); 
   Serial.begin(9600);
-
-  servo1.attach(6);//舵机信号接口
-  servo1.write(servo1_init); //舵机归位
   // key_scan();  
 }
 
