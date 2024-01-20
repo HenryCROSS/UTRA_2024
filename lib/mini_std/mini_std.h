@@ -27,6 +27,11 @@ template <typename T, int SIZE> class list
         return len;
     }
 
+    bool empty() const
+    {
+        return size() == 0;
+    }
+
     bool push_back(const T &value)
     {
         if (len >= SIZE)
@@ -60,7 +65,8 @@ template <typename T, int SIZE> class list
 
     T at(int idx)
     {
-        if(idx >= len || idx < 0){
+        if (idx >= len || idx < 0)
+        {
             T();
         }
 
@@ -70,6 +76,43 @@ template <typename T, int SIZE> class list
   private:
     T data[SIZE];
     int len;
+};
+
+template <typename T, int SIZE> class stack
+{
+  public:
+    // Push an element onto the stack
+    bool push(const T &value)
+    {
+        return elements.push_back(value);
+    }
+
+    // Pop the top element from the stack
+    bool pop()
+    {
+        return elements.pop_back();
+    }
+
+    // Get the top element of the stack
+    T top()
+    {
+        return elements.front();
+    }
+
+    // Check if the stack is empty
+    bool empty() const
+    {
+        return elements.size() == 0;
+    }
+
+    // Get the number of elements in the stack
+    int size() const
+    {
+        return elements.size();
+    }
+
+  private:
+    list<T, SIZE> elements;
 };
 
 } // namespace mini
