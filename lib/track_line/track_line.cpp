@@ -7,6 +7,7 @@
 #include <config.h>
 #include <track_line.h>
 #include <Motor_utils.h>
+#include <Ultrasonic.h>
 
 //读取传感器数值
 void read_data() {
@@ -19,7 +20,8 @@ void read_data() {
 void track_line(){
   read_data();    //读取传感器值
   if(numL >= black_fence && numR >= black_fence){
-    turn_Back_to_Line();
+    Emerge_Stop();
+    delay();
   }else if(numL >= black_fence && numR < black_fence){
     turn_Left_to_Line();
   }else if(numL < black_fence && numR >= black_fence){
@@ -46,7 +48,7 @@ void track_line(){
     }
 
     else{
-      Backward();
+      Go_by_Ultrasonic();
     }
   }
 }
@@ -75,4 +77,8 @@ void turn_Back_to_Line(){
     RotateL();
     delay(Micro_Delay_Time);
   }
+}
+
+Go_by_Ultrasonic(){
+
 }
