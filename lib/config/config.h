@@ -40,7 +40,6 @@ int numR = 0;
 
 
 Servo servo1;//舵机信号接口在setup里面
-int servo1_init = 100;  //舵机初始状态
-int servo1_place1 = 100; //在这里写舵机形态
+int servo1_init = 90;  //舵机初始状态
 
 #endif // !_CONFIG_H_

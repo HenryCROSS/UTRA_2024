@@ -38,10 +38,10 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  servo1.write(15); //舵机归位
+  servo1.write(0); //舵机归位
   delay(500);
   servo1.write(90); //舵机归位
   delay(500);
-  servo1.write(165); //舵机归位
+  servo1.write(180); //舵机归位
   delay(500);
 }
