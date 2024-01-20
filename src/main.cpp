@@ -1,7 +1,19 @@
 #include <common.h>
 
-// put function declarations here:
-int myFunction(int, int);
+//按键扫描程序,检测按钮是否按下
+void key_scan()
+{
+  while (!digitalRead(key));     //当按键没有被按下一直循环（被按下为T=1，没有被按下为F=0）
+  while (digitalRead(key))       //当按键被按下时
+  {
+    delay(10);	                  //延时10ms
+    if (digitalRead(key)  ==  HIGH)//第二次判断按键是否被按下
+    {
+      delay(100);
+      while (digitalRead(key));  //判断按键是否被松开
+    }
+  }
+}
 
 void setup() {
   // put your setup code here, to run once:
@@ -26,9 +38,4 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
 }
