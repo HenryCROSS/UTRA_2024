@@ -8,7 +8,7 @@
 #include <Motor_utils.h>
 
 void motor_run(int lspeed, int rspeed) {
-  int motor_delta = speed * delta;
+  int motor_delta = SPEED * delta;
   int abslspeed=abs(lspeed);
   int absrspeed=abs(rspeed);
   analogWrite(LEFT_SPEED,abslspeed-motor_delta);
@@ -43,7 +43,7 @@ void Emerge_Stop(){
 }
 
 void Forward(){
-  motor_run(speed,speed);
+  motor_run(SPEED,SPEED);
 }
 
 void Forward_By_Time(int forward_time){
@@ -53,7 +53,7 @@ void Forward_By_Time(int forward_time){
 }
 
 void Backward(){
-  motor_run(-speed,-speed);
+  motor_run(-SPEED,-SPEED);
 }
 
 void Backward_By_Time(int backward_time){
@@ -63,17 +63,17 @@ void Backward_By_Time(int backward_time){
 }
 
 void TurnL(){
-  motor_run(0,speed);
+  motor_run(0,SPEED);
 }
 
 void TurnR(){
-  motor_run(speed,0);
+  motor_run(SPEED,0);
 }
 
 void RotateL(){
-  motor_run(-speed,speed);
+  motor_run(-SPEED,SPEED);
 }
 
 void RotateR(){
-  motor_run(speed,-speed);
+  motor_run(SPEED,-SPEED);
 }
