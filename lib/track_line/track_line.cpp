@@ -6,6 +6,7 @@
 // ours
 #include <config.h>
 #include <track_line.h>
+#include <Motor_utils.h>
 
 //读取传感器数值
 void read_data() {
