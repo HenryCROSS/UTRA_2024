@@ -1,19 +1,5 @@
 #include <common.h>
 
-//按键扫描程序,检测按钮是否按下
-void key_scan()
-{
-  while (!digitalRead(key));     //当按键没有被按下一直循环（被按下为T=1，没有被按下为F=0）
-  while (digitalRead(key))       //当按键被按下时
-  {
-    delay(10);	                  //延时10ms
-    if (digitalRead(key)  ==  HIGH)//第二次判断按键是否被按下
-    {
-      delay(100);
-      while (digitalRead(key));  //判断按键是否被松开
-    }
-  }
-}
 
 void setup() {
   // put your setup code here, to run once:
@@ -30,18 +16,13 @@ void setup() {
   pinMode(QTR_SENSOR_L, INPUT);
   pinMode(QTR_SENSOR_R, INPUT); 
   Serial.begin(9600);
-  // key_scan();  
 
   servo1.attach(6);//舵机信号接口
   servo1.write(servo1_init); //舵机归位
+  // key_scan();  
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  servo1.write(0); //舵机归位
-  delay(500);
-  servo1.write(90); //舵机归位
-  delay(500);
-  servo1.write(180); //舵机归位
-  delay(500);
+  Scan_for_Obj();
 }
