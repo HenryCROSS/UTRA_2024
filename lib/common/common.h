@@ -13,5 +13,8 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
+// our libs
+#include <config.h>
+
 
 #endif // !_COMMON_H_
