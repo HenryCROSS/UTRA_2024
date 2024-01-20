@@ -8,13 +8,14 @@
 #include <track_line.h>
 #include <Motor_utils.h>
 #include <Ultrasonic.h>
+#include <QTR_utils.h>
 
 //读取传感器数值
 void read_data() {
-  numL= analogRead(QTR_SENSOR_L);
-  numML = analogRead(QTR_SENSOR_ML);
-  numMR = analogRead(QTR_SENSOR_MR);
-  numR = analogRead(QTR_SENSOR_R);
+  numL= qtr_read_analog(QTR_SENSOR_L);
+  numML = qtr_read_analog(QTR_SENSOR_ML);
+  numMR = qtr_read_analog(QTR_SENSOR_MR);
+  numR = qtr_read_analog(QTR_SENSOR_R);
 } 
 
 void track_line(){
@@ -79,6 +80,6 @@ void turn_Back_to_Line(){
   }
 }
 
-Go_by_Ultrasonic(){
-  
+void Go_by_Ultrasonic(){
+
 }
