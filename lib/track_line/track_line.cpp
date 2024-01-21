@@ -25,8 +25,7 @@ void track_line()
     read_data(); // 读取传感器值
     if (numL >= black_fence && numR >= black_fence)
     {
-        TurnR();
-        delay(Micro_Delay_Time);
+        turn_Right_to_Line();
     }
     else if (numL >= black_fence && numR < black_fence)
     {
