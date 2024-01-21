@@ -18,13 +18,14 @@
 #define BLACK_FENCE 65
 
 #define SPEED 100       // 总体速度
-const int DELTA = 0.05; // 左轮减速调直
+#define DELTA 0.05; // 左轮减速调直
 
 #define ULTRASONIC_DISTANCE 50
 #define MAX_DISTANCE 200 // 最大超声波距离
 
 #define MICRO_DELAY_TIME 1
 
+#define FORWARD_TIME 200
 #define ROTATE_TIME 200
 #define TURN_LEFT_TIME 200
 #define TURN_RIGHT_TIME 200
@@ -297,7 +298,7 @@ void loop()
     init_servo();
     if (!is_obj_exist(ULTRASONIC_DISTANCE))
     {
-        Forward();
+        Forward_By_Time(FORWARD_TIME);
     }
     else
     {
