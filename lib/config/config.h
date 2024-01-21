@@ -43,4 +43,8 @@ extern int numR;
 extern Servo servo1;//舵机信号接口在setup里面
 const int servo1_init = 90;  //舵机初始状态
 
+#define TASK4_ROTATE_L_TIME 100
+#define TASK4_ROTATE_R_TIME 100
+#define TASK4_ULTRA_DISTANCE 10
+
 #endif // !_CONFIG_H_

@@ -77,3 +77,13 @@ void RotateL(){
 void RotateR(){
   motor_run(SPEED,-SPEED);
 }
+
+void RotateL_time(int ms){
+  motor_run(-SPEED,SPEED);
+  delay(ms);
+}
+
+void RotateR_time(int ms){
+  motor_run(SPEED,-SPEED);
+  delay(ms);
+}

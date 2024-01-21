@@ -11,6 +11,8 @@ void TurnL();
 void TurnR();
 void RotateL();
 void RotateR();
+void RotateL_time(int ms);
+void RotateR_time(int ms);
 
 
 #endif // !_MOTOR_UTILS_

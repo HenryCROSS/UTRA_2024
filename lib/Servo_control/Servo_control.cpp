@@ -4,8 +4,8 @@
 // third party
 
 // ours
-#include <common.h>
 #include <Ultrasonic.h>
+#include <common.h>
 #include <config.h>
 
 int degree_lz[] = {15, 90, 165};
@@ -16,6 +16,17 @@ void servo_start()
 }
 
 // 15 90 165
+void scan_front()
+{
+    servo1.write(degree_lz[1]);
+    delay(30);
+    distance[1] = detect_obj_distance(TRIGGER_PIN, ECHO_PIN);
+    Serial.print(degree_lz[1]);
+    Serial.print(",");
+    Serial.print(distance[1]);
+    Serial.print(".");
+}
+
 void scan_for_obj()
 {
     for (int idx = 0; idx < sizeof(degree_lz); idx++)

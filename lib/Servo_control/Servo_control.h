@@ -4,5 +4,6 @@
 
 void Servo_Start();
 void scan_for_obj();
+void scan_front();
 
 #endif // !_SERVO_CONTROL_
