@@ -11,7 +11,8 @@ void motor_run(int lspeed, int rspeed) {
   int motor_delta = SPEED * delta;
   int abslspeed=abs(lspeed);
   int absrspeed=abs(rspeed);
-  analogWrite(LEFT_SPEED,abslspeed-motor_delta);
+  analogWrite(LEFT_SPEED,abslspeed);
+//   analogWrite(LEFT_SPEED,abslspeed-motor_delta);
   analogWrite(RIGHT_SPEED,absrspeed);
   if(lspeed > 0){
     digitalWrite(LEFT_WHEEL_FORWARD,HIGH);

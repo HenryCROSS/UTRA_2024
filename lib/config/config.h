@@ -5,8 +5,8 @@
 
 #define LEFT_SPEED 9              // Motor A enable pin
 #define RIGHT_SPEED 3              // Motor B enable pin
-#define RIGHT_WHEEL_FORWARD 5      // Motor B In1 pin
-#define RIGHT_WHEEL_BACKWARD 4     // Motor B In2 pin
+#define RIGHT_WHEEL_FORWARD 4      // Motor B In1 pin
+#define RIGHT_WHEEL_BACKWARD 5     // Motor B In2 pin
 #define LEFT_WHEEL_FORWARD 8       // Motor A In1 pin 
 #define LEFT_WHEEL_BACKWARD 7      // Motor A In2 pin
 
