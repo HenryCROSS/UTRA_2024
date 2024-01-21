@@ -15,3 +15,10 @@
 void task3()
 {
 }
+
+void move_to_line(){
+    while(numML < black_fence && numMR < black_fence){
+        motor_run(SPEED, SPEED);
+        read_data();
+    }
+}
