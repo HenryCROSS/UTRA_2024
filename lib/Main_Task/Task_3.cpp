@@ -140,6 +140,9 @@ void avoid_obj(){
             Forward();
         }
     }
+    RotateL();
+    delay(turn_time);
+    move_to_line();
     
 }
 
