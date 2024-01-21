@@ -3,12 +3,12 @@
 
 #include <Servo.h>
 
-#define LEFT_SPEED 6              // Motor A enable pin
-#define RIGHT_SPEED 7              // Motor B enable pin
-#define RIGHT_WHEEL_FORWARD 8      // Motor B In1 pin
-#define RIGHT_WHEEL_BACKWARD 9     // Motor B In2 pin
-#define LEFT_WHEEL_FORWARD 10       // Motor A In1 pin 
-#define LEFT_WHEEL_BACKWARD 11      // Motor A In2 pin
+#define LEFT_SPEED 9              // Motor A enable pin
+#define RIGHT_SPEED 3              // Motor B enable pin
+#define RIGHT_WHEEL_FORWARD 5      // Motor B In1 pin
+#define RIGHT_WHEEL_BACKWARD 4     // Motor B In2 pin
+#define LEFT_WHEEL_FORWARD 8       // Motor A In1 pin 
+#define LEFT_WHEEL_BACKWARD 7      // Motor A In2 pin
 
 
 #define TRIGGER_PIN 5              // Ultrasonic sensor trigger pin
@@ -25,7 +25,7 @@ const int delta = 0.05; //左轮减速调直
 #define QTR_SENSOR_R A2           // QTR sensor
 #define QTR_SENSOR_ML A3           // QTR sensor
 #define QTR_SENSOR_MR A4           // QTR sensor
-#define black_fence 700
+#define black_fence 65
 
 #define Ultrasonic_Distance 50
 #define MAX_DISTANCE 200           // 最大超声波距离

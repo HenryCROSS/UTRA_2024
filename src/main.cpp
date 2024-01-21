@@ -1,5 +1,8 @@
 #include <common.h>
 #include <Motor_utils.h>
+#include <QTR_utils.h>
+#include <Servo_control.h>
+#include <Main_Task.h>
 
 Servo servo1;
 int numL = 0;
@@ -38,14 +41,34 @@ void setup() {
   pinMode(QTR_SENSOR_L, INPUT);
   pinMode(QTR_SENSOR_R, INPUT); 
   Serial.begin(9600);
-  key_scan();  
+//   key_scan();  
 
   servo1.attach(6);//舵机信号接口
   servo1.write(servo1_init); //舵机归位
+
+  delay(5000);
+}
+
+void qtr_test(){
+    int qtr_l = qtr_read_analog(QTR_SENSOR_L);
+    int qtr_r = qtr_read_analog(QTR_SENSOR_R);
+    int qtr_ml = qtr_read_analog(QTR_SENSOR_ML);
+    int qtr_mr = qtr_read_analog(QTR_SENSOR_MR);
+
+    Serial.print("qtr_l: ");
+    Serial.print(qtr_l);
+    Serial.print("qtr_r: ");
+    Serial.print(qtr_r);
+    Serial.print("qtr_ml: ");
+    Serial.print(qtr_ml);
+    Serial.print("qtr_mr: ");
+    Serial.print(qtr_mr);
+    Serial.println();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  Forward();
-    // motor_run(10,10);
+    // task1();
+    // qtr_test();
+    // scan_for_obj();
+    Forward();
 }

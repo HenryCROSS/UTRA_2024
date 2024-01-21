@@ -11,6 +11,7 @@
 #include <config.h>
 #include <data_type.h>
 #include <track_line.h>
+#include <Servo_control.h>
 
 int turn_time = 300;
 
@@ -97,17 +98,6 @@ void line_in_task3(){
     }
 }
 
-void turn_Left_to_Line()
-{
-    Forward_By_Time(First_forward_time);
-    while (numMR < black_fence)
-    {
-        read_data();
-        TurnL();
-        delay(Micro_Delay_Time);
-    }
-}
-
 void move_to_line(){
     while(numML < black_fence && numMR < black_fence){
         motor_run(SPEED, SPEED);
@@ -148,7 +138,8 @@ void avoid_obj(){
 
 void task3()
 {
-    bool is_exist = is_obj_exist(10);
+    scan_front();
+    bool is_exist = is_obj_exist(distance[1], 10.0);
 
     if(is_exist){
         avoid_obj();
