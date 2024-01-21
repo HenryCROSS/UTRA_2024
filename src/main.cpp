@@ -1,4 +1,7 @@
 #include <common.h>
+#include <Motor_utils.h>
+
+Servo servo1;
 
 //按键扫描程序,检测按钮是否按下
 void key_scan()
@@ -38,5 +41,6 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  
+  Forward();
+    // motor_run(10,10);
 }

@@ -38,8 +38,7 @@ extern int numML;
 extern int numMR;
 extern int numR;
 
-
-Servo servo1;//舵机信号接口在setup里面
+extern Servo servo1;//舵机信号接口在setup里面
 const int servo1_init = 90;  //舵机初始状态
 
 #endif // !_CONFIG_H_
