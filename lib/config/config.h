@@ -31,7 +31,7 @@ extern double distance[3];
 
 #define Micro_Delay_Time 1 
 
-#define key 1 //start button
+#define key 3 //start button
 
 extern int numL;
 extern int numML;
