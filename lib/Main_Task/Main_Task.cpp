@@ -19,19 +19,6 @@
 //     track_line();
 // }
 
-<<<<<<< HEAD
-void task2()
-{
-    track_line();
-}
-void task3()
-{
-    track_line();
-}
-void task4()
-{
-}
-=======
 // void task2()
 // {
 //     track_line();
@@ -197,4 +184,3 @@ void task4()
 // void task4()
 // {
 // }
->>>>>>> 2d043cdb130e519829e2085553cecdaf5ce76f59

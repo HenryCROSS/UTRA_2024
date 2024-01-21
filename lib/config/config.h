@@ -1,7 +1,7 @@
 #ifndef _CONFIG_H_
 #define _CONFIG_H_
 
-#include <common.h>
+#include <Servo.h>
 
 #define LEFT_SPEED 10              // Motor A enable pin
 #define RIGHT_SPEED 9              // Motor B enable pin
