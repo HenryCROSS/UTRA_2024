@@ -2,6 +2,11 @@
 #include <Motor_utils.h>
 
 Servo servo1;
+int numL = 0;
+int numML = 0;
+int numMR = 0;
+int numR = 0;
+double distance[3] = {0, 0, 0};
 
 //按键扫描程序,检测按钮是否按下
 void key_scan()
