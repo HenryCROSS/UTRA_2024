@@ -11,12 +11,6 @@
 #define TRIGGER_PIN 5 // Ultrasonic sensor trigger pin
 #define ECHO_PIN 12   // Ultrasonic sensor echo pin
 
-#define QTR_SENSOR_L A1  // QTR sensor
-#define QTR_SENSOR_R A2  // QTR sensor
-#define QTR_SENSOR_ML A3 // QTR sensor
-#define QTR_SENSOR_MR A4 // QTR sensor
-#define BLACK_FENCE 65
-
 #define SPEED 100       // 总体速度
 #define DELTA 0.05; // 左轮减速调直
 
@@ -25,7 +19,6 @@
 
 #define MICRO_DELAY_TIME 1
 
-#define FORWARD_TIME 200
 #define ROTATE_TIME 200
 #define TURN_LEFT_TIME 200
 #define TURN_RIGHT_TIME 200
@@ -298,7 +291,7 @@ void loop()
     init_servo();
     if (!is_obj_exist(ULTRASONIC_DISTANCE))
     {
-        Forward_By_Time(FORWARD_TIME);
+        Forward();
     }
     else
     {
