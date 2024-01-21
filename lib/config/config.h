@@ -9,8 +9,8 @@
 #define RIGHT_WHEEL_BACKWARD 3     // Motor B In2 pin
 #define LEFT_WHEEL_FORWARD 4       // Motor A In1 pin 
 #define LEFT_WHEEL_BACKWARD 5      // Motor A In2 pin
-#define TRIGGER_PIN 6              // Ultrasonic sensor trigger pin
-#define ECHO_PIN 7                 // Ultrasonic sensor echo pin
+#define TRIGGER_PIN 5              // Ultrasonic sensor trigger pin
+#define ECHO_PIN 12                 // Ultrasonic sensor echo pin
 
 #define SPEED 100 //总体速度
 const int delta = 0.05; //左轮减速调直
