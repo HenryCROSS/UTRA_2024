@@ -12,8 +12,8 @@
 #define TRIGGER_PIN 6              // Ultrasonic sensor trigger pin
 #define ECHO_PIN 7                 // Ultrasonic sensor echo pin
 
-#define speed 100 //总体速度
-int delta = 0.05; //左轮减速调直
+#define SPEED 100 //总体速度
+const int delta = 0.05; //左轮减速调直
 
 
 #define First_forward_time 200 //转弯前前进时间
@@ -27,19 +27,19 @@ int delta = 0.05; //左轮减速调直
 
 #define Ultrasonic_Distance 50
 #define MAX_DISTANCE 200           // 最大超声波距离
-double distance = 0;
+extern double distance[3];
 
 #define Micro_Delay_Time 1 
 
 #define key 1 //start button
 
-int numL = 0;
-int numML = 0;
-int numMR = 0;
-int numR = 0;
+extern int numL;
+extern int numML;
+extern int numMR;
+extern int numR;
 
 
 Servo servo1;//舵机信号接口在setup里面
-int servo1_init = 90;  //舵机初始状态
+const int servo1_init = 90;  //舵机初始状态
 
 #endif // !_CONFIG_H_

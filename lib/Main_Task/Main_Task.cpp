@@ -4,23 +4,29 @@
 // third party
 
 // ours
-#include <config.h>
 #include <Main_Task.h>
+#include <Motor_utils.h>
+#include <QTR_utils.h>
+#include <Ultrasonic.h>
+#include <config.h>
+#include <data_type.h>
 #include <track_line.h>
 
-void task1(){
+status_t status;
+
+void task1()
+{
     track_line();
 }
 
-void task2(){
-    
-}
-
-void task3(){
+void task2()
+{
     track_line();
 }
-
-void task4(){
-    
+void task3()
+{
+    track_line();
 }
-
+void task4()
+{
+}
