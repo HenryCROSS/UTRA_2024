@@ -16,7 +16,7 @@ double detect_obj_distance(uint8_t trigger_pin, uint8_t echo_pin) {
   return pulseIn(echo_pin, HIGH, MAX_DISTANCE * 58) / 58.0;
 }
 
-bool is_obj_exist(double range) {
+bool is_obj_exist(double distance, double range) {
   distance = detect_obj_distance(TRIGGER_PIN, ECHO_PIN);
   if (distance == 0.00) {
     return false;

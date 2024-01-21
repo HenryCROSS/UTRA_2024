@@ -3,6 +3,6 @@
 #include <common.h>
 
 void Servo_Start();
-void Scan_for_Obj();
+void scan_for_obj();
 
 #endif // !_SERVO_CONTROL_

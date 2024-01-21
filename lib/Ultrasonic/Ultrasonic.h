@@ -3,6 +3,6 @@
 #include <common.h>
 
 double detect_obj_distance(uint8_t trigger_pin, uint8_t echo_pin);
-bool is_obj_exist(double range);
+bool is_obj_exist(double distance, double range);
 
 #endif // !_ULTRASONIC_

@@ -98,16 +98,10 @@ void turn_Back_to_Line()
 
 void Go_by_Ultrasonic()
 {
-
-    servo1.write(servo1_init);
-    delay(30);
-    bool is_exist = is_obj_exist(10);
-    servo1.write(0);
-    delay(30);
-    bool is_exist_left = is_obj_exist(10);
-    servo1.write(180);
-    delay(30);
-    bool is_exist_right = is_obj_exist(10);
+    scan_for_obj();
+    bool is_exist = is_obj_exist(distance[1], 10);
+    bool is_exist_left = is_obj_exist(distance[0], 10);
+    bool is_exist_right = is_obj_exist(distance[2], 10);
 
     if (is_exist_left)
     {
