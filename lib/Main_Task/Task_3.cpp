@@ -148,6 +148,7 @@ void avoid_obj(){
 
 void task3()
 {
+    
 }
 
 

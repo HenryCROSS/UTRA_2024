@@ -30,7 +30,7 @@ void setup() {
   pinMode(QTR_SENSOR_L, INPUT);
   pinMode(QTR_SENSOR_R, INPUT); 
   Serial.begin(9600);
-  // key_scan();  
+  key_scan();  
 
   servo1.attach(6);//舵机信号接口
   servo1.write(servo1_init); //舵机归位
@@ -38,10 +38,5 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  servo1.write(0); //舵机归位
-  delay(500);
-  servo1.write(90); //舵机归位
-  delay(500);
-  servo1.write(180); //舵机归位
-  delay(500);
+  
 }
