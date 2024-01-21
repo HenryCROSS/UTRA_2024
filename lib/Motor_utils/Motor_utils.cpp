@@ -8,33 +8,42 @@
 #include <Motor_utils.h>
 
 void motor_run(int lspeed, int rspeed) {
-  int motor_delta = SPEED * delta;
+//   int motor_delta = SPEED * delta;
+//   int abslspeed=abs(lspeed);
+//   int absrspeed=abs(rspeed);
+//   analogWrite(LEFT_SPEED,abslspeed);
+// //   analogWrite(LEFT_SPEED,abslspeed-motor_delta);
+//   analogWrite(RIGHT_SPEED,absrspeed);
+//   if(lspeed > 0){
+//     digitalWrite(LEFT_WHEEL_FORWARD,HIGH);
+//     digitalWrite(LEFT_WHEEL_BACKWARD,LOW);
+//   }else if(lspeed == 0){
+//     digitalWrite(LEFT_WHEEL_FORWARD,HIGH);
+//     digitalWrite(LEFT_WHEEL_BACKWARD,HIGH);
+//   }else{
+//     digitalWrite(LEFT_WHEEL_FORWARD,LOW);
+//     digitalWrite(LEFT_WHEEL_BACKWARD,HIGH);
+//   }
+
+//   if(rspeed > 0){
+//     digitalWrite(RIGHT_WHEEL_FORWARD,HIGH);
+//     digitalWrite(RIGHT_WHEEL_BACKWARD,LOW);
+//   }else if(rspeed == 0){
+//     digitalWrite(RIGHT_WHEEL_FORWARD,HIGH);
+//     digitalWrite(RIGHT_WHEEL_BACKWARD,HIGH);
+//   }else{
+//     digitalWrite(RIGHT_WHEEL_FORWARD,LOW);
+//     digitalWrite(RIGHT_WHEEL_BACKWARD,HIGH);
+//   }
+
   int abslspeed=abs(lspeed);
   int absrspeed=abs(rspeed);
+  digitalWrite(LEFT_WHEEL_FORWARD,HIGH);
+  digitalWrite(LEFT_WHEEL_BACKWARD,LOW);
+  digitalWrite(RIGHT_WHEEL_FORWARD,HIGH);
+  digitalWrite(RIGHT_WHEEL_BACKWARD,LOW);
   analogWrite(LEFT_SPEED,abslspeed);
-//   analogWrite(LEFT_SPEED,abslspeed-motor_delta);
   analogWrite(RIGHT_SPEED,absrspeed);
-  if(lspeed > 0){
-    digitalWrite(LEFT_WHEEL_FORWARD,HIGH);
-    digitalWrite(LEFT_WHEEL_BACKWARD,LOW);
-  }else if(lspeed == 0){
-    digitalWrite(LEFT_WHEEL_FORWARD,HIGH);
-    digitalWrite(LEFT_WHEEL_BACKWARD,HIGH);
-  }else{
-    digitalWrite(LEFT_WHEEL_FORWARD,LOW);
-    digitalWrite(LEFT_WHEEL_BACKWARD,HIGH);
-  }
-
-  if(rspeed > 0){
-    digitalWrite(RIGHT_WHEEL_FORWARD,HIGH);
-    digitalWrite(RIGHT_WHEEL_BACKWARD,LOW);
-  }else if(rspeed == 0){
-    digitalWrite(RIGHT_WHEEL_FORWARD,HIGH);
-    digitalWrite(RIGHT_WHEEL_BACKWARD,HIGH);
-  }else{
-    digitalWrite(RIGHT_WHEEL_FORWARD,LOW);
-    digitalWrite(RIGHT_WHEEL_BACKWARD,HIGH);
-  }
 }
 
 void Emerge_Stop(){
