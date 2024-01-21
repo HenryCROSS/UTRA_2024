@@ -4,6 +4,7 @@
 // third party
 
 // ours
+#include <common.h>
 #include <Ultrasonic.h>
 #include <config.h>
 
