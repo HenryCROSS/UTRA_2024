@@ -148,6 +148,13 @@ void avoid_obj(){
 
 void task3()
 {
+    bool is_exist = is_obj_exist(10);
+
+    if(is_exist){
+        avoid_obj();
+    } else {
+        motor_run(SPEED, SPEED);
+    }
 }
 
 
